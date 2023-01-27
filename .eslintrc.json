@@ -3,15 +3,13 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier"
   ],
   "env": {
     "browser": true,
-    "es6": true,
-    "jest": true,
-    "node": true
+    "es6": true
   },
   "root": true,
   "parserOptions": {
@@ -52,11 +50,5 @@
     "@typescript-eslint/no-var-reqiures": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
-  },
-  "settings": {
-    "react": {
-      "pragma": "React",
-      "version": "detect"
-    }
   }
 }
