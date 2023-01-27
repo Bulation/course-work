@@ -1,0 +1,74 @@
+.formSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formContainer {
+  max-width: 844px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+}
+
+.inputWrapper {
+  width: 306px;
+  color: #686868;
+  font: 400 14px/17px Inter;
+  margin-bottom: 20px;
+}
+
+.rightColumn {
+  color: #686868;
+  font: 400 14px/21px Inter;
+  padding-top: 50px;
+}
+
+.rulesList {
+  list-style-type: none;
+}
+
+.rulesTitle {
+  font-weight: 600;
+}
+
+.rulesItem::before {
+  content: '';
+  display: inline-block;
+  transform: translate(0, -2px);
+  margin-right: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #686868;
+}
+
+.accountInfo {
+  color: #5A7180;
+  margin-top: 70px;
+}
+
+.authLink {
+  color: #664EF9;
+  text-decoration: none;
+  font: 500 14px/26px Inter;
+}
+
+.validationError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#EB5757;
+  color: #FFFFFF;
+  font: 700 16px/24px Inter;
+  margin-bottom: 20px;
+}
+
+.errorMessageSvg {
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF80;
+  margin-left: 15px;
+}
