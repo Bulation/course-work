@@ -1,0 +1,60 @@
+.section {
+  background: linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);  
+  position: relative;
+  z-index: 2;
+}
+
+.section::after {
+  content: "";
+  display: block;
+  background: url(/img/city.png) no-repeat center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.formModal {
+  margin: 0 auto;
+  box-shadow: 0px 20px 40px 0px #275F9E33;
+  background: #FFFEFE;
+  border-radius: 10px;
+}
+
+.modalTitle {
+  color: #000000;
+  font: 700 25px/30px Inter;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modalText {
+  color: #686868;
+  font: 400 14px/17px Inter;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modalButton {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFD54F;
+  text-decoration: none;
+  border-radius: 33px;
+  text-align: center;
+  color: #1E2123;
+  font: 700 16px/24px Inter;
+  padding: 12px 0;
+}
+
+.modalButton:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
