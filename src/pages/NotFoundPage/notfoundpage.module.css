@@ -1,0 +1,91 @@
+.notFoundSection {
+  background: linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);  
+  position: relative;
+  z-index: 2;
+}
+
+.notFoundSection::after {
+  content: "";
+  display: block;
+  background: url(/img/city.png) no-repeat center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.notFoundContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+
+.notFoundContainer::before, .notFoundContainer::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-image: url(/svg/square.svg);
+}
+
+.notFoundContainer::before {
+  top: 96px;
+  left: 10px;
+}
+
+.notFoundContainer::after {
+  right: 106px;
+  bottom: 78px;
+}
+
+.notFound {
+  display: flex;
+  margin: 0 37px 0 117px;
+  padding: 115px 0 135px;
+  color: #ffffff;
+  gap: 70px;
+}
+
+.notFoundTitle {
+  font: 700 60px/73px Inter;
+  text-shadow: 0px 1px 5px #00000040;
+  margin: 60px 0 20px;
+}
+
+.notFoundText {
+  max-width: 450px;
+  font: 500 20px/24px Inter;
+  margin-bottom: 50px;
+}
+
+.notFoundButton {
+  display: inline-block;
+  background-color: #FFD54F;
+  border-radius: 33px;
+  padding: 12px 24px;
+  font: 700 16px/24px Inter;
+  color: #1E2123;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.notFoundButton:hover {
+  background: #FEC100;
+}
+
+.notFoundSvg {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+.notFoundError {
+  text-shadow: 0px 1px 30px #00000040;
+  opacity: 0.3;
+  font: 700 250px Inter;
+}
