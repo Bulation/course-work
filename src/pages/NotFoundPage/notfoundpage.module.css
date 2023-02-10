@@ -1,3 +1,9 @@
+@import url('../../commonstyles.module.css');
+
+.section {
+  composes: section;
+}
+
 .notFoundSection {
   background: linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);  
   position: relative;
@@ -24,14 +30,7 @@
   margin: 0 auto;
   padding: 0 10px;
   position: relative;
-}
-
-.notFoundContainer::before, .notFoundContainer::after {
-  content: '';
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  background-image: url(/svg/square.svg);
+  composes: square;
 }
 
 .notFoundContainer::before {
@@ -65,14 +64,7 @@
 }
 
 .notFoundButton {
-  display: inline-block;
-  background-color: #FFD54F;
-  border-radius: 33px;
-  padding: 12px 24px;
-  font: 700 16px/24px Inter;
-  color: #1E2123;
-  text-decoration: none;
-  cursor: pointer;
+  composes: buttonLink;
 }
 
 .notFoundButton:hover {
@@ -84,6 +76,7 @@
   height: 12px;
   margin-right: 10px;
 }
+
 .notFoundError {
   text-shadow: 0px 1px 30px #00000040;
   opacity: 0.3;

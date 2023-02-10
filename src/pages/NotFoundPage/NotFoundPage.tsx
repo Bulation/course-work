@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Icon from '../../components/Icon/Icon';
-import { navigationLinks, productsList } from '../../data/data';
-import commonStyles from '../../commonstyles.module.css';
 import styles from './notfoundpage.module.css';
 
 export default function NotFoundPage() {
@@ -11,7 +9,7 @@ export default function NotFoundPage() {
     <>
       <Header />
       <main>
-        <section className={commonStyles.section}>
+        <section className={styles.section}>
           <div className={styles.notFoundContainer}>
             <div className={styles.notFound}>
               <div className={styles.notFoundDescription}>
