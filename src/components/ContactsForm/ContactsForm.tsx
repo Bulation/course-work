@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import TextInput from '../TextInput/TextInput';
 import styles from './contactsform.module.css';
-import commonStyles from '../../commonstyles.module.css';
 import { SubmitHandler, FieldValues, useForm } from 'react-hook-form';
 import FormModal from '../FormModal/FormModal';
 import Portal from '../Portal/Portal';
+import { MIN_NAME_LENGTH } from '../../constants/constants';
 
-const MIN_VALUE = 3;
 type FormValues = {
   username: string;
   mail: string;
@@ -19,7 +18,7 @@ const usernameRules = {
     message: 'This field is required',
   },
   minLength: {
-    value: MIN_VALUE,
+    value: MIN_NAME_LENGTH,
     message: 'Length of name should be more than 3 symbols',
   },
 };
@@ -37,10 +36,6 @@ const mailRules = {
 };
 
 export default function ConctactsForm() {
-  // get info of logged
-  // import modal styles from common styles, add state for modal, add state for form
-  const [username, setUsername] = useState('');
-  const [mail, setMail] = useState('');
   const [isModalOpen, setModalOpen] = useState(false);
   const {
     register,
@@ -54,7 +49,7 @@ export default function ConctactsForm() {
   };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.contactsForm}>
+      <form noValidate onSubmit={handleSubmit(onSubmit)} className={styles.contactsForm}>
         <div className={styles.formContainer}>
           <div className={styles.userInfo}>
             <div className={styles.userName}>
@@ -107,14 +102,14 @@ export default function ConctactsForm() {
       <Portal>
         <FormModal isModalOpen={isModalOpen} setModalOpen={(value: boolean) => setModalOpen(value)}>
           <>
-            <h2 className={commonStyles.modalTitle}>Ваше письмо отправлено!</h2>
-            <p className={commonStyles.modalText}>
+            <h2 className={styles.modalTitle}>Ваше письмо отправлено!</h2>
+            <p className={styles.modalText}>
               Какое-то сообщение о том, что письмо отправлено, какое-то сообщение, что письмо
               отправлено.
             </p>
             <button
               onClick={() => setModalOpen(false)}
-              className={commonStyles.modalButton}
+              className={styles.modalButton}
               type="button"
             >
               Закрыть окно

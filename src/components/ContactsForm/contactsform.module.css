@@ -1,3 +1,5 @@
+@import url('../../commonstyles.module.css');
+
 .contactsForm {
   box-shadow: 0px 20px 40px 0px #275F9E33;
   background: #FFFEFE;
@@ -7,7 +9,7 @@
 
 .formContainer {
   font: 500 14px/17px Inter;
-  color: #686868;
+  color: var(--greyTextColor);
   padding: 40px;
 }
 
@@ -45,7 +47,7 @@
 }
 
 .textarea:focus {
-  color: #1E2123;
+  color: var(--darkTextColor);
   outline: 2px solid #664EF9CC;
 }
 
@@ -59,7 +61,7 @@
   color: #ffffff;
   padding: 12px 56px;
   text-align: center;
-  background-color: #664EF9;
+  background-color: var(--linkColor);
   margin: 0 auto;
   border-radius: 33px;
   cursor: pointer;
@@ -68,4 +70,16 @@
 .formButton:disabled {
   background-color: grey;
   cursor: not-allowed;
+}
+
+.modalButton {
+  composes: modalButton;
+}
+
+.modalTitle {
+  composes: modalTitle;
+}
+
+.modalText {
+  composes: modalText;
 }
