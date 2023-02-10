@@ -1,0 +1,41 @@
+@import url("../../commonstyles.module.css");
+
+.flatsListContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 70px 10px 80px;
+}
+
+.flatsListTitle {
+  font: 700 20px/20px Inter;
+  color: var(--darkTextColor);
+  margin-bottom: 40px;
+}
+
+.flatsList {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 31px;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 50px;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+
+.paginationList {
+	composes: paginationList;
+}
+
+.paginationListItem {
+	composes: paginationListItem;
+}
+
+.active {
+	composes: active;
+}
