@@ -14,13 +14,13 @@
 }
 
 .input:focus {
-  color: #1E2123;
+  color: var(--darkTextColor);
   outline: 2px solid #664EF9CC;
 }
 
 .input:focus + .inputSvg {
   opacity: 1;
-  fill: #664EF9;
+  fill: var(--linkColor);
 }
 
 .input:focus::placeholder {
@@ -28,7 +28,7 @@
 }
 
 .inputSvg {
-  fill: #686868;
+  fill: var(--greyTextColor);
   position: absolute;
   opacity: 0.3;
   top: 15px;
