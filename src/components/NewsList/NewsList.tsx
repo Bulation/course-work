@@ -5,7 +5,6 @@ import Paginate from 'react-paginate';
 import {
   MARGIN_PAGES_DISPLAYED,
   NEWS_COUNT_PER_PAGE,
-  INITIAL_PAGES_COUNT,
   PAGE_RANGE_DISPLAYED,
 } from '../../constants/constants';
 import DetailedNews from '../../components/DetailedNews/DetailedNews';
@@ -26,7 +25,6 @@ export default function NewsList() {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(fetchArticles()).then((res) => {
-      console.log(res.payload);
       dispatch(setSearchValue(inputValue));
     });
     //in beginning it load news, after loading it filters news by input value
