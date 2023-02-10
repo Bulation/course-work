@@ -1,0 +1,12 @@
+.errorTitle {
+	color: var(--darkTextColor);
+	font: 700 30px/30px Inter;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.errorText {
+	font: 500 14px/17px Inter;
+	text-align: center;
+	margin-top: 20px;
+}
