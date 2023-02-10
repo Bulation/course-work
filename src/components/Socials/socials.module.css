@@ -1,0 +1,24 @@
+@import url('../../commonstyles.module.css');
+
+.socials {
+  composes: socials;
+  color: var(--greyTextColor);
+  font: 500 14px/17px Inter;
+}
+
+.socialsList {
+  composes: socialsList;
+}
+
+.socialsItem {
+  composes: socialsItem;
+}
+
+.socialsSvg {
+  composes: socialsSvg;
+  fill: var(--darkTextColor);
+}
+
+.socialsSvg:hover {
+  fill: var(--linkColor);
+}
