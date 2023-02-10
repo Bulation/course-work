@@ -1,0 +1,128 @@
+@import url('../../commonstyles.module.css');
+
+.searchFlatsTitle {
+  font: 700 25px/30px Inter;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.searchFlatsDescription {
+  font: 500 16px/19px Inter;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  text-align: center;
+  max-width: 390px;
+}
+
+.searchBtn {
+  composes: button;
+}
+
+.searchBtn:hover {
+  color: #FEC100;
+}
+
+.searchSvg {
+  width: 15px;
+  height: 15px;
+  fill: #FFD54F;
+}
+
+.presentation {
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  bottom: -230px;
+  z-index: 2;
+}
+
+.presentationItem {
+  width: calc(33% - 18px);
+  background: #FFFEFE;
+  box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+  border-radius: 10px;
+  padding: 27px 37px 44px;
+}
+
+.presentationItemColored {
+  composes: presentationItem;
+  background-color: #FFDA00;
+}
+
+.presentationItemHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  margin-bottom: 25px;
+}
+
+.presentationItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0px 11px 20px 0px #7F9BBB29;
+}
+
+.presentationItemSvg {
+  width: 65px;
+  height: 65px;
+}
+
+.presentationItemTitle {
+  color: var(--linkColor);
+  font: 700 18px/22px Inter;
+  
+}
+
+.presentationItemTitleColored {
+  composes: presentationItemTitle;
+  color: #333333;
+  font: 700 30px/36px Inter;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.presentationItemDescription {
+  color: var(--darkTextColor);
+  font: 400 14px/17px Inter;
+  margin-bottom: 33px;
+}
+
+.presentationItemDescriptionColored {
+  composes: presentationItemDescription;
+  color: #242424;
+  margin-bottom: 14px;
+}
+
+.presentationBtn {
+  composes: button;
+  box-shadow: 0px 15px 40px 0px #FEC10026;
+  color: #242424;
+  background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
+}
+
+.presentationBtn:hover {
+  background: #FEC100;
+}
+
+.presentationBtnColored {
+  composes: presentationBtn;
+  margin-top: 37px;
+  background: linear-gradient(270deg, #7E6AF3 0%, #6540CD 100%);
+  color: #ffffff;
+}
+
+.presentationBtnColored:hover {
+  background: #5C35F9;
+}
+
+.presentationBtnSvg {
+  width: 20px;
+  height: 20px;
+}
