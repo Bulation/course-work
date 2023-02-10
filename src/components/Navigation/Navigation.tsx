@@ -15,10 +15,10 @@ interface INavigationProps {
 
 export default function Navigation(props: INavigationProps) {
   const { links, styles } = props;
-  const setActive:
-    | ((props: { isActive: boolean; isPending: boolean }) => string | undefined)
-    | undefined = ({ isActive }) =>
-    isActive ? `${styles.active} ${styles.navigationLink}` : styles.navigationLink;
+  const setActive: //function for styling active link
+  ((props: { isActive: boolean; isPending: boolean }) => string | undefined) | undefined = ({
+    isActive,
+  }) => (isActive ? `${styles.active} ${styles.navigationLink}` : styles.navigationLink);
   return (
     <nav>
       <ul className={styles.navigationList}>
@@ -26,9 +26,9 @@ export default function Navigation(props: INavigationProps) {
           return (
             <li className={styles.navigationItem} key={link.content}>
               <NavLink className={setActive} to={link.address}>
-                {link.svgId && styles.navigationSvg ? (
+                {link.svgId && styles.navigationSvg && (
                   <Icon id={link.svgId} className={styles.navigationSvg}></Icon>
-                ) : null}
+                )}
                 {link.content}
               </NavLink>
             </li>
