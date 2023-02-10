@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './registration.module.css';
-import commonStyles from '../../commonstyles.module.css';
 import TextInput from '../../components/TextInput/TextInput';
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import Icon from '../../components/Icon/Icon';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import FormModal from '../../components/FormModal/FormModal';
+import { MIN_NAME_LENGTH } from '../../constants/constants';
 
 type FormValues = {
   login: string;
@@ -13,7 +13,6 @@ type FormValues = {
   password: string;
   confirmPassword: string;
 };
-const MIN_VALUE = 3;
 
 const loginRules = {
   required: {
@@ -21,7 +20,7 @@ const loginRules = {
     message: 'This field is required',
   },
   minLength: {
-    value: MIN_VALUE,
+    value: MIN_NAME_LENGTH,
     message: 'Length of name should be more than 3 symbols',
   },
 };
@@ -69,20 +68,26 @@ export default function RegistrationPage() {
       }
     },
   };
+  const navigate = useNavigate();
   const [isRegistrationSuccessful, setRegistrationSuccessful] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
-  const onSubmit: SubmitHandler<FieldValues> = () => {
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
     setRegistrationSuccessful(true);
     setModalOpen(true);
-    console.log(1);
+    localStorage.setItem('name', data.login);
+    localStorage.setItem('password', data.password);
+    localStorage.setItem('isLogout', 'false');
+    setTimeout(() => {
+      navigate('/');
+    }, 1000);
   };
   return (
-    <section className={`${commonStyles.section} ${styles.formSection}`}>
+    <section className={styles.formSection}>
       {!isRegistrationSuccessful ? (
-        <form action="#" className={commonStyles.formModal} onSubmit={handleSubmit(onSubmit)}>
+        <form action="#" className={styles.formModal} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.formContainer}>
             <div className={styles.leftColumn}>
-              <h2 className={commonStyles.modalTitle}>Регистрация</h2>
+              <h2 className={styles.modalTitle}>Регистрация</h2>
               <div className={styles.inputWrapper}>
                 <TextInput
                   register={register}
@@ -128,11 +133,11 @@ export default function RegistrationPage() {
                 />
               </div>
               {isSubmitted && !isSubmitSuccessful && !isValid && (
-                <div className={`${commonStyles.modalButton} ${styles.validationError}`}>
+                <div className={styles.validationError}>
                   <span>Ошибка ввода</span> <Icon id="#error" className={styles.errorMessageSvg} />
                 </div>
               )}
-              <button type="submit" className={commonStyles.modalButton} disabled={!isDirty}>
+              <button type="submit" className={styles.modalButton} disabled={!isDirty}>
                 Зарегистрироваться
               </button>
             </div>
@@ -165,14 +170,14 @@ export default function RegistrationPage() {
       ) : (
         <FormModal isModalOpen={isModalOpen} setModalOpen={(value: boolean) => setModalOpen(value)}>
           <>
-            <h2 className={commonStyles.modalTitle}>Подтвердите регистрацию</h2>
-            <p className={commonStyles.modalText}>
+            <h2 className={styles.modalTitle}>Подтвердите регистрацию</h2>
+            <p className={styles.modalText}>
               Письмо для подтверждения аккаунта отправлено почту. Перейдите по ссылке, указанной в
               письме. Если письма нет, то проверьте спам.
             </p>
             <button
               onClick={() => setModalOpen(false)}
-              className={commonStyles.modalButton}
+              className={styles.modalButton}
               type="button"
             >
               Понятно

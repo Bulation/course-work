@@ -1,8 +1,23 @@
+@import url('../../commonstyles.module.css');
+
 .formSection {
+  composes: section;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.formModal {
+  composes: formModal;
+}
+
+.modalTitle {
+  composes: modalTitle;
+}
+
+.modalText {
+  composes: modalText;
 }
 
 .formContainer {
@@ -15,13 +30,13 @@
 
 .inputWrapper {
   width: 306px;
-  color: #686868;
+  color: var(--greyTextColor);
   font: 400 14px/17px Inter;
   margin-bottom: 20px;
 }
 
 .rightColumn {
-  color: #686868;
+  color: var(--greyTextColor);
   font: 400 14px/21px Inter;
   padding-top: 50px;
 }
@@ -42,7 +57,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #686868;
+  background-color: var(--greyTextColor);;
 }
 
 .accountInfo {
@@ -51,19 +66,23 @@
 }
 
 .authLink {
-  color: #664EF9;
+  color: var(--linkColor);
   text-decoration: none;
   font: 500 14px/26px Inter;
 }
 
 .validationError {
+  composes: modalButton;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#EB5757;
+  background-color: var(--warningColor);
   color: #FFFFFF;
-  font: 700 16px/24px Inter;
   margin-bottom: 20px;
+}
+
+.modalButton {
+  composes: modalButton;
 }
 
 .errorMessageSvg {
