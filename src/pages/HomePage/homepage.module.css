@@ -1,0 +1,42 @@
+@import url('../../commonstyles.module.css');
+
+.searchFlatsSection {
+  composes: section;
+}
+
+.searchFlatsContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 75px 10px 217px;
+  color: #ffffff;
+  position: relative;
+  composes: square;
+}
+
+.searchFlatsContainer::before {
+  top: 46px;
+  right: 60px;
+}
+
+.searchFlatsContainer::after {
+  width: 70px;
+  height: 70px;
+}
+
+.flatForDayContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 353px 10px 110px;
+  color: var(--darkTextColor);
+  font: 400 14px/150% Inter;
+  position: relative;
+  composes: yellowSquare;
+}
+
+.flatForDayContainer::before {
+  right: 88px;
+  top: 259px;
+}
