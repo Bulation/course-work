@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import ProductsList from './ProductsList';
@@ -8,7 +7,7 @@ import Icon from '../Icon/Icon';
 import { navigationLinks } from '../../data/data';
 
 export default function Header() {
-  const [isAuth, setIsAuth] = useState(true);
+  const isLogout = localStorage.getItem('isLogout') === 'true';
   // context for getting info about authorisation: isAuth
   // add addAd function for button onClick
   return (
@@ -30,22 +29,22 @@ export default function Header() {
               Закладки
               <Icon id="#heart" className={styles.markSvg} />
             </Link>
-            {isAuth ? (
-              <UserInfo />
-            ) : (
-              <Link to="/login" className={styles.signButton}>
+            {isLogout ? (
+              <Link to="/auth" className={styles.signButton}>
                 Вход и регистрация
               </Link>
+            ) : (
+              <UserInfo />
             )}
           </div>
         </div>
       </div>
-      <div className={styles.bottomHeaderContainer}>
-        <div className={styles.logo}>
-          <Link to="/"></Link>
+      <div className={styles.bottomHeaderWrapper}>
+        <div className={styles.bottomHeaderContainer}>
+          <Link to="/" className={styles.logo}></Link>
+          <ProductsList />
+          <button className={styles.addAd}>+ Разместить объявление</button>
         </div>
-        <ProductsList />
-        <button className={styles.addAd}>+ Разместить объявление</button>
       </div>
     </header>
   );

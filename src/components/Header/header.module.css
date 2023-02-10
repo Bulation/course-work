@@ -54,6 +54,10 @@
   text-decoration: none;
 }
 
+.markSvg:hover {
+  fill: #EB5757;
+}
+
 .markSvg {
   width: 16px;
   height: 16px;
@@ -97,12 +101,30 @@
   width: 18px;
   height: 17px;
   cursor: pointer;
+  position: relative;
+}
+
+.userDropDownItem {
+  position: absolute;
+  top: 20px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+}
+
+.userDropDownItem:hover {
+  background-color: #F8F8F8;
+}
+
+.bottomHeaderWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0px #00000014;
 }
 
 .bottomHeaderContainer {
   composes: topHeaderContainer;
   align-items: center;
-  box-shadow: 0px 10px 20px 0px #00000014;
   font: 600 14px/17px Inter;
 }
 
@@ -138,6 +160,7 @@
   margin-left: 15px;
   width: 13px;
   height: 15px;
+  fill: #FFD54F;
 }
 
 .dropDownList {
