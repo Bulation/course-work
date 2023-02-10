@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { fastFilterData, flatsData } from '../../data/data';
+import { fastFilterData } from '../../data/data';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import useFilter from '../../hooks/useFilter';
 import { setFilteredFlats } from '../../redux/slices/filterSlice';
