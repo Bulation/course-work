@@ -15,3 +15,7 @@ build via npm run build
 - React Select
 - React Paginate
 - Vite
+
+# Деплой
+
+https://bulation.github.io/course-work/sdaem
