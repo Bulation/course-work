@@ -1,0 +1,48 @@
+@import url('../Flat/flat.module.css');
+
+.flatsTileItem {
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+}
+
+.flatsTileItemImgContainer {
+  width: 42%;
+  composes: flatsItemImgContainer;
+}
+
+.flatsTileItemRooms {
+  color: var(--darkTextColor);
+  font: 700 20px/20px Inter;
+  margin-bottom: 17px;
+}
+
+.flatsTileItemMarkSvg {
+  composes: flatsItemMarkSvg;
+  fill: var(--linkColor);
+}
+
+.flatsTileItemInfo {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.flatsTileItemMetro {
+  composes: flatsItemMetro;
+  fill: var(--linkColor);
+}
+
+.districtColored {
+  color: var(--linkColor);
+}
+
+.tileMark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  composes: chip;
+  color: #EB5757;
+  font: 600 14px/17px Inter;
+}
