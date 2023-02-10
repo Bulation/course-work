@@ -329,10 +329,6 @@ p {
   /* 2 */
 }
 
-input[type="number" i] {
-  padding: 0;
-}
-
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
