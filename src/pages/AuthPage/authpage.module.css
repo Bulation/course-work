@@ -1,3 +1,5 @@
+@import url('../../commonstyles.module.css');
+
 .formSection {
   display: flex;
   justify-content: center;
@@ -21,7 +23,7 @@
 }
 
 .inputWrapper {
-  color: #686868;
+  color: var(--greyTextColor);
   font: 500 14px/17px Inter;
   margin-bottom: 20px;
 }
@@ -72,18 +74,18 @@
 
 .toggleCheckbox:checked + .toggleSwitch {
   opacity: 1;
-  background-color: #664EF9;
+  background-color: var(--linkColor);
 }
 
 .toggleLabel {
-  color: #686868;
+  color: var(--greyTextColor);
   font: 400 14px/20px Inter;
   margin-left: 8px;
 }
 
 .forgotPasswordLink {
   text-decoration: none;
-  color: #664EF9;
+  color: var(--linkColor);
   font: 500 14px/20px Inter;
 }
 
@@ -95,7 +97,7 @@
 }
 
 .regLink {
-  color: #664EF9;
+  color: var(--linkColor);
   text-decoration: none;
   font: 500 14px/26px Inter;
 }
@@ -105,4 +107,20 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+.modalButton {
+  composes: modalButton;
+}
+
+.formModal {
+  composes: formModal;
+}
+
+.modalTitle {
+  composes: modalTitle;
+}
+
+.modalText {
+  composes: modalText;
 }
