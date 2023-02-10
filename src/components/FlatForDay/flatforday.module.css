@@ -1,0 +1,34 @@
+@import url('../../commonstyles.module.css');
+
+.flatForDayDescription {
+  max-width: 842px;
+}
+
+.flatSubtitle {
+  composes: gradientSubtitle;
+}
+
+.flatTitle {
+  composes: homePageTitle;
+}
+
+.flatImgContainer {
+  margin: 32px 23px 32px 0;
+  float: left;
+  position: relative;
+  composes: yellowSquare from "../../commonstyles.module.css";
+}
+
+.flatImgContainer::before {
+  bottom: -15px;
+  right: -15px;
+}
+
+.flatForDayTextTitle {
+  margin: 32px 0 0 0;
+  font-weight: 600;
+}
+
+.flatForDayText {
+  margin-bottom: 30px;
+}
