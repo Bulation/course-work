@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
-import { payments, socials, footerFlatsData, ownerInfo } from '../../data/data';
+import { payments, socials, flatsData, ownerInfo } from '../../data/data';
 import Icon from '../Icon/Icon';
 import styles from './footer.module.css';
 import { productsList, navigationLinks } from '../../data/data';
@@ -37,7 +37,7 @@ export default function Footer() {
             <div className={styles.flatsContainer}>
               <h3 className={styles.flatsTitle}>Квартиры</h3>
               <ul className={styles.flatsList}>
-                {footerFlatsData.map((flat) => (
+                {flatsData.map((flat) => (
                   <li className={styles.flatsItem} key={flat.content}>
                     <Link className={styles.flatsLink} to={flat.address}>
                       {flat.content}
@@ -60,7 +60,7 @@ export default function Footer() {
               <p>Мы в соцсетях</p>
               <div className={styles.socials}>
                 <ul className={styles.socialsList}>
-                  {socials.map((social) => (
+                  {socials.slice(0, 3).map((social) => (
                     <li className={styles.socialsItem} key={social.url}>
                       <a className={styles.socialsLink} href={social.url}>
                         <Icon id={social.src} className={styles.socialsSvg}></Icon>
