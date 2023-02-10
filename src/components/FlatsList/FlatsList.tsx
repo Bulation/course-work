@@ -20,6 +20,7 @@ import { IFilterState } from '../../interfaces/IFilterState';
 import Socials from '../Socials/Socials';
 import Flat from '../CatalogFlat/CatalogFlat';
 import { Context } from '../../App';
+import CatalogFlat from '../CatalogFlat/CatalogFlat';
 export default function FlatsList() {
   const dispatch = useAppDispatch();
   const { filteredFlatsData } = useAppSelector((state) => state.filter);
@@ -56,7 +57,7 @@ export default function FlatsList() {
           ) : status === 'success' ? (
             <ul className={styles.flatsList}>
               {slicedData.map((flat, i) => (
-                <Flat key={flat.id} flat={flat} i={i} />
+                <CatalogFlat key={flat.id} flat={flat} i={i} />
               ))}
             </ul>
           ) : (
