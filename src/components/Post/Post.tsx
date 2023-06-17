@@ -7,6 +7,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import PostLoader from '../PostLoader/PostLoader';
 import Socials from '../Socials/Socials';
 import styles from './post.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 export default function Post() {
   const { id } = useParams();
@@ -21,7 +22,7 @@ export default function Post() {
       {
         current: false,
         content: 'Новости',
-        address: '/news',
+        address: `${SITE_URL}news`,
       },
       {
         current: true,

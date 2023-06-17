@@ -9,6 +9,7 @@ import { resetFilter, setFilteredFlats, setFilterValue } from '../../redux/slice
 import Icon from '../Icon/Icon';
 import SelectComponent from '../SelectComponent/SelectComponent';
 import styles from './filter.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 export default function Filter() {
   const [isMoreOptionsOpen, setIsMoreOptionsOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Filter() {
   const { filterState } = useAppSelector((state) => state.filter);
   const { flatsData } = useAppSelector((state) => state.flats);
   const location = useLocation();
-  const isHome = location.pathname === '/' ? true : false;
+  const isHome = location.pathname === `${SITE_URL}` ? true : false;
   const [searchParams, setSearchParams] = useSearchParams('');
   const {
     filter,
@@ -106,7 +107,7 @@ export default function Filter() {
                 <Icon id="#flatsMark" className={styles.mapSvg} />
               </div>
             </div>
-            <Link to={`/catalog?${urlValue}`} className={styles.filterBtn}>
+            <Link to={`${SITE_URL}catalog?${urlValue}`} className={styles.filterBtn}>
               Показать
               <Icon id="#arrowRightBlack" className={styles.btnSvg}></Icon>
             </Link>

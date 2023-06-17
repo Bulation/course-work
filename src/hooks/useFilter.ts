@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SingleValue } from 'react-select';
 import { cityOptions, roomsOptions, metroOptions, districtOptions, sortList } from '../data/data';

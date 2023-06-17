@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from '../../hooks/reduxHooks';
 import { fetchArticles } from '../../redux/slices/newsSlice';
 import Icon from '../Icon/Icon';
 import styles from './asidenews.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 export default function AsideNews() {
   const { allNewsData } = useAppSelector((state) => state.news);
@@ -19,7 +20,7 @@ export default function AsideNews() {
         <React.Fragment key={news.id}>
           <Link
             key={news.id}
-            to={`/news/${news.id}`}
+            to={`${SITE_URL}news/${news.id}`}
             className={styles.detailedNews}
             onClick={() => {
               window.scrollTo(0, 0);
@@ -36,7 +37,11 @@ export default function AsideNews() {
           <div className={styles.line}></div>
         </React.Fragment>
       ))}
-      <Link className={styles.newsLink} to="/news" onClick={() => window.scrollTo(0, 0)}>
+      <Link
+        className={styles.newsLink}
+        to={`${SITE_URL}news`}
+        onClick={() => window.scrollTo(0, 0)}
+      >
         Посмотреть все
         <Icon id="#arrowRightBlue" className={styles.newsSvg}></Icon>
       </Link>

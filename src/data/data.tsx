@@ -1,26 +1,27 @@
+import { SITE_URL } from '../constants/constants';
 import { LinkType } from '../types/LinkType';
 
 export const navigationLinks: LinkType[] = [
   {
     content: 'Главная',
-    address: '/',
+    address: `${SITE_URL}`,
   },
   {
     content: 'Новости',
-    address: '/news',
+    address: `${SITE_URL}news`,
   },
   {
     content: 'Размещение и тарифы',
-    address: '/tarifs',
+    address: `${SITE_URL}tarifs`,
   },
   {
     content: 'Объявления на карте',
-    address: '/ads',
+    address: `${SITE_URL}ads`,
     svgId: '#adsMark',
   },
   {
     content: 'Контакты',
-    address: '/contacts',
+    address: `${SITE_URL}contacts`,
   },
 ];
 
@@ -81,54 +82,54 @@ export const fastFilterData = [
 ];
 
 export const productsList: LinkType[] = [
-  { content: 'Квартиры на сутки', address: '/catalog', svgId: '#flatsMark' },
-  { content: 'Коттеджи и усадьбы', address: '/catalog' },
-  { content: 'Бани и Сауны', address: '/catalog' },
-  { content: 'Авто напрокат', address: '/catalog' },
+  { content: 'Квартиры на сутки', address: `${SITE_URL}catalog`, svgId: '#flatsMark' },
+  { content: 'Коттеджи и усадьбы', address: `${SITE_URL}catalog` },
+  { content: 'Бани и Сауны', address: `${SITE_URL}catalog` },
+  { content: 'Авто напрокат', address: `${SITE_URL}catalog` },
 ];
 
 export const dropDownList = [
   [
-    { content: 'Квартиры на сутки в Минске', address: '/catalog?city=Минск' },
-    { content: 'Квартиры на сутки в Гомеле', address: '/catalog?city=Гомель' },
-    { content: 'Квартиры на сутки в Бресте', address: '/catalog?city=Брест' },
-    { content: 'Квартиры на сутки в Витебске', address: '/catalog?city=Витебск' },
-    { content: 'Квартиры на сутки в Гродно', address: '/catalog?city=Гродно' },
-    { content: 'Квартиры на сутки в Могилеве', address: '/catalog?city=Могилев' },
+    { content: 'Квартиры на сутки в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Квартиры на сутки в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Квартиры на сутки в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Квартиры на сутки в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Квартиры на сутки в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Квартиры на сутки в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
   ],
   [
-    { content: 'Коттеджи и усадьбы в Минске', address: '/catalog?city=Минск' },
-    { content: 'Коттеджи и усадьбы в Гомеле', address: '/catalog?city=Гомель' },
-    { content: 'Коттеджи и усадьбы в Бресте', address: '/catalog?city=Брест' },
-    { content: 'Коттеджи и усадьбы в Витебске', address: '/catalog?city=Витебск' },
-    { content: 'Коттеджи и усадьбы в Гродно', address: '/catalog?city=Гродно' },
-    { content: 'Коттеджи и усадьбы в Могилеве', address: '/catalog?city=Могилев' },
+    { content: 'Коттеджи и усадьбы в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Коттеджи и усадьбы в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Коттеджи и усадьбы в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Коттеджи и усадьбы в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Коттеджи и усадьбы в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Коттеджи и усадьбы в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
   ],
   [
-    { content: 'Бани и сауны в Минске', address: '/catalog?city=Минск' },
-    { content: 'Бани и сауны в Гомеле', address: '/catalog?city=Гомель' },
-    { content: 'Бани и сауны в Бресте', address: '/catalog?city=Брест' },
-    { content: 'Бани и сауны в Витебске', address: '/catalog?city=Витебск' },
-    { content: 'Бани и сауны в Гродно', address: '/catalog?city=Гродно' },
-    { content: 'Бани и сауны в Могилеве', address: '/catalog?city=Могилев' },
+    { content: 'Бани и сауны в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Бани и сауны в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Бани и сауны в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Бани и сауны в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Бани и сауны в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Бани и сауны в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
   ],
   [
-    { content: 'Авто напрокат в Минске', address: '/catalog?city=Минск' },
-    { content: 'Авто напрокат в Гомеле', address: '/catalog?city=Гомель' },
-    { content: 'Авто напрокат в Бресте', address: '/catalog?city=Брест' },
-    { content: 'Авто напрокат в Витебске', address: '/catalog?city=Витебск' },
-    { content: 'Авто напрокат в Гродно', address: '/catalog?city=Гродно' },
-    { content: 'Авто напрокат в Могилеве', address: '/catalog?city=Могилев' },
+    { content: 'Авто напрокат в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Авто напрокат в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Авто напрокат в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Авто напрокат в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Авто напрокат в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Авто напрокат в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
   ],
 ];
 
 export const flatsData = [
-  { content: 'Квартиры в Минске', address: '/catalog?city=Минск' },
-  { content: 'Квартиры в Гомеле', address: '/catalog?city=Гомель' },
-  { content: 'Квартиры в Бресте', address: '/catalog?city=Брест' },
-  { content: 'Квартиры в Витебске', address: '/catalog?city=Витебск' },
-  { content: 'Квартиры в Гродно', address: '/catalog?city=Гродно' },
-  { content: 'Квартиры в Могилеве', address: '/catalog?city=Могилев' },
+  { content: 'Квартиры в Минске', address: `${SITE_URL}catalog?city=Минск` },
+  { content: 'Квартиры в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+  { content: 'Квартиры в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+  { content: 'Квартиры в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+  { content: 'Квартиры в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+  { content: 'Квартиры в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
 ];
 
 export const flats = [
@@ -140,23 +141,23 @@ export const flats = [
     title: 'Коттеджи и усадьбы',
     flatsList: [
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Аггроусадьбы',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Коттеджи',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Загородный комплекс',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Базы отдыха',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Ещё',
         more: true,
       },
@@ -166,15 +167,15 @@ export const flats = [
     title: 'Популярные направления',
     flatsList: [
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Коттеджи и усадьбы на о. Брасласких',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Коттеджи и усадьбы (жилье) на Нарочи',
       },
       {
-        address: '/catalog',
+        address: `${SITE_URL}catalog`,
         content: 'Коттеджи и усадьбы (жилье) у воды, на берегу, на озере',
       },
     ],

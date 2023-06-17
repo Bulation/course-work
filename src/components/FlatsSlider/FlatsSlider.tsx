@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { metroOptions, districtOptions, flats } from '../../data/data';
+import { metroOptions, districtOptions } from '../../data/data';
 import { selectStyles, homeMetroStyles } from '../../data/styles';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import useFilter from '../../hooks/useFilter';
@@ -10,7 +10,7 @@ import Icon from '../Icon/Icon';
 import SelectComponent from '../SelectComponent/SelectComponent';
 import styles from './flatsslider.module.css';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { FLATS_LIST_COUNT_PER_PAGE } from '../../constants/constants';
+import { FLATS_LIST_COUNT_PER_PAGE, SITE_URL } from '../../constants/constants';
 import Flat from '../Flat/Flat';
 import { Navigation } from 'swiper';
 import 'swiper/css';
@@ -90,7 +90,7 @@ export default function FlatsSlider() {
               Предложений {filterState.city && `в городе ${filterState.city}`}
             </p>
           </div>
-          <Link to={`/catalog?${urlValue}`} className={styles.seeMoreBtn}>
+          <Link to={`${SITE_URL}catalog?${urlValue}`} className={styles.seeMoreBtn}>
             Посмотреть все
             <Icon id="#arrowRightWhite" className={styles.moreBtnSvg} />
           </Link>

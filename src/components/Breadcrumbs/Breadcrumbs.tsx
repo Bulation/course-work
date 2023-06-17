@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import styles from './breadcrumbs.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 type BreadcrumbLink = {
   current: boolean;
@@ -43,7 +44,7 @@ export default function Breadcrumbs({ breadcrumbsList }: IBreadcrumbsProps) {
   }
   return (
     <div className={styles.container}>
-      <Link to="/">
+      <Link to={`${SITE_URL}`}>
         <Icon id="#home" className={styles.breadcrumbSvg} />
       </Link>
       {links}

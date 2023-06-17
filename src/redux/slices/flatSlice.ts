@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { FLATS_API_ENDPOINT } from '../../constants/constants';
 import { IFlatsData } from '../../interfaces/IFlatsData';
 import { Status } from '../../types/Status';

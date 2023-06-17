@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { useState } from 'react';
 import Portal from '../../components/Portal/Portal';
 import FormModal from '../../components/FormModal/FormModal';
+import { SITE_URL } from '../../constants/constants';
 
 type FormValues = {
   login: string;
@@ -30,7 +31,7 @@ export default function AuthPage() {
       setIsAuthSuccessful(true);
       localStorage.setItem('isLogout', 'false');
       setTimeout(() => {
-        navigate('/');
+        navigate(`${SITE_URL}`);
       }, 1000);
     }
   };
@@ -72,7 +73,7 @@ export default function AuthPage() {
                   <span className={styles.toggleSwitch}></span>
                   <span className={styles.toggleLabel}>Запомнить меня</span>
                 </label>
-                <Link className={styles.forgotPasswordLink} to="/">
+                <Link className={styles.forgotPasswordLink} to={`${SITE_URL}`}>
                   Забыли пароль?
                 </Link>
               </div>
@@ -82,7 +83,7 @@ export default function AuthPage() {
               </button>
               <p className={styles.accountInfo}>
                 Ещё нет аккаунта?{' '}
-                <Link className={styles.regLink} to="/registration">
+                <Link className={styles.regLink} to={`${SITE_URL}registration`}>
                   Создайте аккаунт
                 </Link>
               </p>
@@ -97,7 +98,11 @@ export default function AuthPage() {
           >
             <>
               <h2 className={styles.modalTitle}>Вы успешно авторизовались</h2>
-              <Link onClick={() => setModalOpen(false)} className={styles.modalButton} to="/">
+              <Link
+                onClick={() => setModalOpen(false)}
+                className={styles.modalButton}
+                to={`${SITE_URL}`}
+              >
                 Вернуться на главную
               </Link>
             </>

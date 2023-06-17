@@ -18,9 +18,9 @@ import { IFlatsData } from '../../interfaces/IFlatsData';
 import { useSearchParams } from 'react-router-dom';
 import { IFilterState } from '../../interfaces/IFilterState';
 import Socials from '../Socials/Socials';
-import Flat from '../CatalogFlat/CatalogFlat';
 import { Context } from '../../App';
 import CatalogFlat from '../CatalogFlat/CatalogFlat';
+
 export default function FlatsList() {
   const dispatch = useAppDispatch();
   const { filteredFlatsData } = useAppSelector((state) => state.filter);

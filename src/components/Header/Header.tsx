@@ -5,6 +5,7 @@ import UserInfo from './UserInfo';
 import styles from './header.module.css';
 import Icon from '../Icon/Icon';
 import { navigationLinks } from '../../data/data';
+import { SITE_URL } from '../../constants/constants';
 
 export default function Header() {
   const isLogout = localStorage.getItem('isLogout') === 'true';
@@ -25,12 +26,12 @@ export default function Header() {
             }}
           />
           <div className={styles.buttonsContainer}>
-            <Link className={styles.mark} to="/marks">
+            <Link className={styles.mark} to={`${SITE_URL}marks`}>
               Закладки
               <Icon id="#heart" className={styles.markSvg} />
             </Link>
             {isLogout ? (
-              <Link to="/auth" className={styles.signButton}>
+              <Link to={`${SITE_URL}auth`} className={styles.signButton}>
                 Вход и регистрация
               </Link>
             ) : (
@@ -41,7 +42,7 @@ export default function Header() {
       </div>
       <div className={styles.bottomHeaderWrapper}>
         <div className={styles.bottomHeaderContainer}>
-          <Link to="/" className={styles.logo}></Link>
+          <Link to={`${SITE_URL}`} className={styles.logo}></Link>
           <ProductsList />
           <button className={styles.addAd}>+ Разместить объявление</button>
         </div>

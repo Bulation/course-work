@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './newscard.module.css';
 import { Article } from '../../types/Article';
+import { SITE_URL } from '../../constants/constants';
 
 interface INewsCardProps {
   detailedNews: Article;
@@ -9,7 +10,7 @@ interface INewsCardProps {
 export default function NewsCard({ detailedNews }: INewsCardProps) {
   return (
     <Link
-      to={`/news/${detailedNews.id}`}
+      to={`${SITE_URL}news/${detailedNews.id}`}
       className={styles.detailedNews}
       onClick={() => {
         window.scrollTo(0, 0);

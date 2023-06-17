@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { proposalsList, cities, flats } from '../../data/data';
 import Icon from '../Icon/Icon';
 import styles from './proposals.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 export default function Proposals() {
   return (
@@ -16,14 +17,14 @@ export default function Proposals() {
               {proposal.chips && (
                 <div className={styles.chips}>
                   {cities.map((city) => (
-                    <Link to={`/catalog?city=${city}`} key={city} className={styles.chip}>
+                    <Link to={`${SITE_URL}catalog?city=${city}`} key={city} className={styles.chip}>
                       {city}
                     </Link>
                   ))}
                 </div>
               )}
               {proposal.more && (
-                <Link to="/catalog" className={styles.proposalMore}>
+                <Link to={`${SITE_URL}catalog`} className={styles.proposalMore}>
                   <Icon id="#arrowRightWhite" className={styles.proposalSvg} />
                 </Link>
               )}

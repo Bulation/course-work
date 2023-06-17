@@ -4,6 +4,7 @@ import { payments, socials, flatsData, ownerInfo } from '../../data/data';
 import Icon from '../Icon/Icon';
 import styles from './footer.module.css';
 import { productsList, navigationLinks } from '../../data/data';
+import { SITE_URL } from '../../constants/constants';
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
       <div className={styles.footerContainer}>
         <div className={styles.footerFirstColumn}>
           <div className={styles.logo}>
-            <Link to="/"></Link>
+            <Link to={`${SITE_URL}`}></Link>
           </div>
           <span className={styles.logoText}>СДАЁМ БАЙ</span>
           <div className={styles.ownerInfo}>

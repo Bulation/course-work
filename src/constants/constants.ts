@@ -9,6 +9,7 @@ export const MARGIN_PAGES_DISPLAYED = 1;
 export const NEWS_API_ENDPOINT =
   'https://rss-news-api.onrender.com/everything?apiKey=83b895de0ec6457eb3c3e8334047d479&sources=lenta';
 export const FLATS_API_ENDPOINT = 'https://63dd0d53df83d549ce9983d3.mockapi.io/flat';
+export const SITE_URL = import.meta.env.BASE_URL; // получение адреса сайта из env переменной
 export const PLACEHOLDER_ARTICLE: Article = {
   id: 0,
   author: 'No author',

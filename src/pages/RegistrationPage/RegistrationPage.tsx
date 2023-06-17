@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import Icon from '../../components/Icon/Icon';
 import { useState } from 'react';
 import FormModal from '../../components/FormModal/FormModal';
-import { MIN_NAME_LENGTH } from '../../constants/constants';
+import { MIN_NAME_LENGTH, SITE_URL } from '../../constants/constants';
 
 type FormValues = {
   login: string;
@@ -78,7 +78,7 @@ export default function RegistrationPage() {
     localStorage.setItem('password', data.password);
     localStorage.setItem('isLogout', 'false');
     setTimeout(() => {
-      navigate('/');
+      navigate(`${SITE_URL}`);
     }, 1000);
   };
   return (
@@ -160,7 +160,7 @@ export default function RegistrationPage() {
               </div>
               <p className={styles.accountInfo}>
                 Уже есть аккаунта?{' '}
-                <Link className={styles.authLink} to="/auth">
+                <Link className={styles.authLink} to={`${SITE_URL}auth`}>
                   Войдите
                 </Link>
               </p>
