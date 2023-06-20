@@ -25,7 +25,7 @@ function App() {
   return (
     <Context.Provider value={{ isList, setIsList }}>
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route path={`${SITE_URL}`} element={<HomePage />} />
         <Route path={`${SITE_URL}contacts`} element={<ContactsPage />}></Route>
         <Route path={`${SITE_URL}registration`} element={<RegistrationPage />}></Route>
         <Route path={`${SITE_URL}auth`} element={<AuthPage />}></Route>
