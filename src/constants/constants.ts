@@ -21,7 +21,7 @@ export const PLACEHOLDER_ARTICLE: Article = {
     name: 'No name',
   },
   url: 'No url',
-  urlToImage: '/img/placeholder.png',
+  urlToImage: `${SITE_URL}img/placeholder.png`,
   content: 'No content',
 };
 export const MIN_NAME_LENGTH = 3;

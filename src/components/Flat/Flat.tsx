@@ -4,6 +4,7 @@ import useClickOutside from '../../hooks/useClickOutside';
 import { IFlatsData } from '../../interfaces/IFlatsData';
 import Icon from '../Icon/Icon';
 import styles from './flat.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 interface IFlatProps {
   flat: IFlatsData;
@@ -19,7 +20,7 @@ export default function Flat({ flat, i, countPerPage, style }: IFlatProps) {
   return (
     <li className={styles.flatsItem} style={style}>
       <div className={styles.flatsItemImgContainer}>
-        <img className={styles.flatsItemImg} src="/img/flat.png" alt="" />
+        <img className={styles.flatsItemImg} src={`${SITE_URL}img/flat.png`} alt="" />
       </div>
       <div className={styles.flatsItemBody}>
         <div className={styles.flatsItemHeader}>

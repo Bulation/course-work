@@ -184,25 +184,25 @@ export const flats = [
 
 export const proposalsList = [
   {
-    imgPath: '/img/flats.png',
+    imgPath: `${SITE_URL}img/flats.png`,
     subtitle: 'Снять квартиру',
     title: 'Квартиры на сутки',
     chips: true,
   },
   {
-    imgPath: '/img/cottages.png',
+    imgPath: `${SITE_URL}img/cottages.png`,
     subtitle: 'Снять коттедж на праздник',
     title: 'Коттеджи и усадьбы',
     more: true,
   },
   {
-    imgPath: '/img/baths.png',
+    imgPath: `${SITE_URL}img/baths.png`,
     subtitle: 'Попариться в бане с друзьями',
     title: 'Бани и сауны',
     more: true,
   },
   {
-    imgPath: '/img/cars.png',
+    imgPath: `${SITE_URL}img/cars.png`,
     subtitle: 'Если срочно нужна машина',
     title: 'Авто на прокат',
     more: true,
@@ -219,7 +219,7 @@ export const presentationData = [
       </div>
     ),
     btn: '+ Разместить объявление',
-    imgPath: '/svg/target.svg',
+    imgPath: `${SITE_URL}svg/target.svg`,
   },
   {
     title: 'Поднимайте объявления',
@@ -231,7 +231,7 @@ export const presentationData = [
       </div>
     ),
     btn: 'Узнать стоимость услуги',
-    imgPath: '/svg/move.svg',
+    imgPath: `${SITE_URL}svg/move.svg`,
   },
   {
     title: 'Приоритет Gold',
@@ -296,26 +296,26 @@ export const socials = [
 export const payments = [
   {
     name: 'visa',
-    src: '/img/visa.png',
+    src: `${SITE_URL}img/visa.png`,
   },
   {
     name: 'webpay',
-    src: '/img/webpay.png',
+    src: `${SITE_URL}img/webpay.png`,
   },
   {
     name: 'verify-visa',
-    src: '/img/verifyvisa.png',
+    src: `${SITE_URL}img/verifyvisa.png`,
   },
   {
     name: 'master card',
-    src: '/img/mastercard.png',
+    src: `${SITE_URL}img/mastercard.png`,
   },
   {
     name: 'master card secure code',
-    src: '/img/securecode.png',
+    src: `${SITE_URL}img/securecode.png`,
   },
   {
     name: 'belkart',
-    src: '/img/belkart.png',
+    src: `${SITE_URL}img/belkart.png`,
   },
 ];

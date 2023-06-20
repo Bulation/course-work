@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import useClickOutside from '../../hooks/useClickOutside';
 import styles from './header.module.css';
+import { SITE_URL } from '../../constants/constants';
 
 export default function UserInfo() {
   const dropDownNode = useRef<HTMLDivElement>(null);
@@ -9,7 +10,7 @@ export default function UserInfo() {
   return (
     <div className={styles.userInfoContainer}>
       <div className={styles.userInfoAvatarContainer}>
-        <img className={styles.userInfoAvatar} src="/svg/user.svg#user" alt="avatar" />
+        <img className={styles.userInfoAvatar} src={`${SITE_URL}svg/user.svg#user`} alt="avatar" />
       </div>
       <p className={styles.username}>{name}</p>
       <div ref={dropDownNode} className={styles.arrow} onClick={() => setIsOpen((value) => !value)}>

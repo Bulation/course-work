@@ -1,3 +1,4 @@
+import { SITE_URL } from '../../constants/constants';
 import styles from './flatforday.module.css';
 export default function FlatForDay() {
   return (
@@ -5,7 +6,7 @@ export default function FlatForDay() {
       <p className={styles.flatSubtitle}>Что такое Sdaem.by</p>
       <h2 className={styles.flatTitle}>Квартира на сутки в Минске</h2>
       <div className={styles.flatImgContainer}>
-        <img src="/img/flat.png" alt="" />
+        <img src={`${SITE_URL}img/flat.png`} alt="" />
       </div>
       <h4 className={styles.flatForDayTextTitle}>Нужна квартира на сутки в Минске?</h4>
       <p className={styles.flatForDayText}>

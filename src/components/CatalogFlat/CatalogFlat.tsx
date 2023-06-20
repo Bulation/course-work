@@ -1,6 +1,10 @@
 import { useContext, useRef } from 'react';
 import { Context } from '../../App';
-import { FLATS_LIST_COUNT_PER_PAGE, FLATS_TILE_COUNT_PER_PAGE } from '../../constants/constants';
+import {
+  FLATS_LIST_COUNT_PER_PAGE,
+  FLATS_TILE_COUNT_PER_PAGE,
+  SITE_URL,
+} from '../../constants/constants';
 import { reducer } from '../../helperFunctions/reducer';
 import useClickOutside from '../../hooks/useClickOutside';
 import { IFlatsData } from '../../interfaces/IFlatsData';
@@ -25,7 +29,7 @@ export default function CatalogFlat({ flat, i }: IFlatProps) {
     return (
       <li className={styles.flatsTileItem}>
         <div className={styles.flatsTileItemImgContainer}>
-          <img className={styles.flatsItemImg} src="/img/flat.png" alt="" />
+          <img className={styles.flatsItemImg} src={`${SITE_URL}img/flat.png`} alt="" />
         </div>
         <div className={styles.flatsItemBody}>
           <div className={styles.flatsItemHeader}>

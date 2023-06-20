@@ -1,5 +1,6 @@
 import { StylesConfig, GroupBase } from 'react-select';
 import { ISelectChoice } from '../interfaces/ISelectChoice';
+import { SITE_URL } from '../constants/constants';
 
 export const sortStyles: StylesConfig<ISelectChoice, false, GroupBase<ISelectChoice>> = {
   container: (baseStyles) => ({
@@ -94,7 +95,7 @@ export const homeMetroStyles: StylesConfig<ISelectChoice, false, GroupBase<ISele
     paddingLeft: '35px',
     position: 'relative',
     '&:before': {
-      content: 'url(/svg/metro.svg)',
+      content: `url(${SITE_URL}svg/metro.svg)`,
       position: 'absolute',
       top: '6px',
       left: '10px',
