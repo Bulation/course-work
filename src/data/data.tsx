@@ -219,7 +219,7 @@ export const presentationData = [
       </div>
     ),
     btn: '+ Разместить объявление',
-    imgPath: `${SITE_URL}svg/target.svg`,
+    imgPath: `${SITE_URL}img/target.png`,
   },
   {
     title: 'Поднимайте объявления',
@@ -231,7 +231,7 @@ export const presentationData = [
       </div>
     ),
     btn: 'Узнать стоимость услуги',
-    imgPath: `${SITE_URL}svg/move.svg`,
+    imgPath: `${SITE_URL}img/move.png`,
   },
   {
     title: 'Приоритет Gold',
