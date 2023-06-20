@@ -1,0 +1,26 @@
+@import url('../../commonstyles.module.css');
+
+.filtersSection {
+  position: relative;
+  composes: sectionGradient;
+}
+
+.filtersSection::before {
+  left: 0;
+}
+
+.searchFlatsSection {
+  composes: section;
+}
+
+.searchFlatsSection {
+  z-index: 0;
+}
+
+.searchFlatsContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 75px 10px 86px;
+  color: #ffffff;
+  position: relative;
+}

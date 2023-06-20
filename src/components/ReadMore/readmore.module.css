@@ -1,0 +1,26 @@
+@import url('../Post/post.module.css');
+
+.newsContainer {
+	display: flex;
+	gap: 30px;
+}
+
+.readMoreSection {
+  composes: postSection;
+}
+
+.readMoreSection::before {
+  height: 100%;
+  bottom: 0;
+}
+
+.readMoreContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 62px 10px 100px;
+}
+
+.readMoreTitle {
+  font: 700 25px/30px Inter;
+  margin-bottom: 45px;
+}

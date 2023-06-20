@@ -1,0 +1,43 @@
+.filtersContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px 57px;
+  color: var(--darkTextColor);
+}
+
+.pageTitle {
+  font: 700 25px/25px Inter;
+  margin-bottom: 40px;
+}
+
+.recommendationText {
+  font: 500 16px/16px Inter;
+  margin-bottom: 25px;
+}
+
+.fastFiltersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style-type: none;
+}
+
+.fastFiltersItem {
+  display: inline;
+  background: var(--opacityBgColor);
+  border-radius: 17px;
+  padding: 6px 10px;
+  color: var(--linkColor);
+  font: 400 14px/14px Inter;
+  cursor: pointer;
+}
+
+.fastFiltersItem:hover {
+  background: #664EF933;
+}
+
+.fastFiltersSvg {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+}

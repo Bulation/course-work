@@ -1,0 +1,141 @@
+.footer {
+  box-shadow: 0px -11px 40px 0px #275F9E0D;
+}
+
+.footerContainer {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  color: #8291A3;
+}
+
+.footerFirstColumn {
+  flex-basis: 25%
+}
+
+.logo {
+  width: 134px;
+  height: 19px;
+  margin-bottom: 10px;
+  background: url(/img/logo.png) no-repeat;
+  background-size: cover;
+}
+
+.logoText {
+  display: block;
+  font: 500 12px/15px Inter;
+  margin-bottom: 36px;
+}
+
+.ownerInfo {
+  max-width: 280px;
+  font: 400 11px/13px Inter;
+}
+
+.ownerInfoSpan {
+  display: inline-block;
+}
+
+.footerSecondColumn {
+  flex-basis: 75%;
+  font: 400 14px/17px Inter;
+  color: #8291A3;
+}
+
+.listsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.productsList {
+  list-style-type: none;
+}
+
+.productsLink {
+  font: inherit;
+  font-weight: 700;
+  color: #1E2123;
+  text-decoration: none;
+}
+
+.productsItem {
+  margin-bottom: 21px;
+}
+
+.flatsList {
+  list-style-type: none;
+  column-count: 2;
+}
+
+.flatsTitle {
+  font: inherit;
+  font-weight: 700;
+  color: #1E2123;
+  margin-bottom: 10px;
+}
+
+.flatsItem {
+  margin-bottom: 8px;
+}
+
+.flatsLink {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigationList {
+  margin-top: 4px;
+  list-style-type: none;
+}
+
+.navigationItem {
+  margin-bottom: 8px;
+}
+
+.navigationLink {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialsContainer {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font: inherit;
+  color: #1E2123;
+}
+
+.socialsList {
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+}
+
+.socialsSvg {
+  width: 30px;
+  height: 30px;
+}
+
+.paymentsContainer {
+  display: flex;
+  align-items: center;
+  max-width: 340px;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.paymentsImg {
+  max-width: 100%;
+  height: auto;
+  min-width: 22px;
+  max-height: 30px;
+}

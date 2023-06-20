@@ -1,0 +1,59 @@
+{
+  "name": "course-work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bulation/course-work.git"
+  },
+  "keywords": [],
+  "author": "Bulat Garipov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bulation/course-work/issues"
+  },
+  "homepage": "https://github.com/Bulation/course-work#readme",
+  "dependencies": {
+    "@mozilla/readability": "^0.4.2",
+    "@reduxjs/toolkit": "^1.9.2",
+    "@types/react-paginate": "^7.1.1",
+    "html-react-parser": "^3.0.8",
+    "jsdom": "^21.1.0",
+    "react": "^18.2.0",
+    "react-content-loader": "^6.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.42.1",
+    "react-paginate": "^8.1.4",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-select": "^5.7.0",
+    "scrape-html-web": "^2.3.7",
+    "swiper": "^9.0.4"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^20.0.1",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "@vitejs/plugin-legacy": "^4.0.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.2",
+    "terser": "^5.15.1",
+    "typescript": "^4.6.4",
+    "vite": "^4.2.0"
+  }
+}

@@ -1,0 +1,93 @@
+@import url('../../commonstyles.module.css');
+
+.formSection {
+  composes: section;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formModal {
+  composes: formModal;
+}
+
+.modalTitle {
+  composes: modalTitle;
+}
+
+.modalText {
+  composes: modalText;
+}
+
+.formContainer {
+  max-width: 844px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+}
+
+.inputWrapper {
+  width: 306px;
+  color: var(--greyTextColor);
+  font: 400 14px/17px Inter;
+  margin-bottom: 20px;
+}
+
+.rightColumn {
+  color: var(--greyTextColor);
+  font: 400 14px/21px Inter;
+  padding-top: 50px;
+}
+
+.rulesList {
+  list-style-type: none;
+}
+
+.rulesTitle {
+  font-weight: 600;
+}
+
+.rulesItem::before {
+  content: '';
+  display: inline-block;
+  transform: translate(0, -2px);
+  margin-right: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--greyTextColor);;
+}
+
+.accountInfo {
+  color: #5A7180;
+  margin-top: 70px;
+}
+
+.authLink {
+  color: var(--linkColor);
+  text-decoration: none;
+  font: 500 14px/26px Inter;
+}
+
+.validationError {
+  composes: modalButton;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--warningColor);
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.modalButton {
+  composes: modalButton;
+}
+
+.errorMessageSvg {
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF80;
+  margin-left: 15px;
+}

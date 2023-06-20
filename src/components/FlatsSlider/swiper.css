@@ -1,0 +1,32 @@
+.swiper {
+  padding: 55px 10px 110px;
+  filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+}
+
+.swiper-button-prev, .swiper-button-next {
+  padding: 19px;
+  border: 1px solid var(--linkColor);
+  border-radius: 50%;
+  color: var(--linkColor);
+  margin-right: 50px;
+}
+
+.swiper-button-next {
+  margin-left: 50px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: var(--opacityBgColor);
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 15px;
+}

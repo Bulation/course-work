@@ -1,0 +1,234 @@
+.flatsItem {
+  background: #FFFEFE;
+  border-radius: 10px;
+  filter: drop-shadow(0px 20px 40px rgba(39, 95, 158, 0.1));
+  width: calc(33% - 17px);
+}
+
+.flatsItemImgContainer {
+  width: 100%;
+  position: relative;
+}
+
+.flatsItemImgContainer::after {
+  position: absolute;
+  content: 'Gold';
+  top: 0;
+  right: 0;
+  background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
+  border-radius: 0px 10px 10px 10px;
+  text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
+  font: 700 18px/22px Inter;
+  color: #ffffff;
+  text-align: center;
+  padding: 7px 12px;
+  margin-bottom: 20px;
+}
+
+.flatsItemImg {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.flatsItemBody {
+  padding: 15px 20px;
+}
+
+.flatsItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.flatsItemPrice {
+  color: var(--linkColor);
+  font: 700 20px/24px Inter;
+}
+
+.flatsItemSubtitle {
+  color: #BDBDBD;
+  font: 400 14px/17px Inter;
+}
+
+.chip {
+  background: #F8F8F8;
+  border-radius: 18px;
+  font: 500 14px/17px Inter;
+  color: var(--greyTextColor);
+  padding: 9px 14px;
+}
+
+.flatsItemRooms {
+  composes: chip;
+  padding: 8px;
+}
+
+.flatsItemAddress {
+  margin-bottom: 20px;
+}
+
+.flatsItemCityAndStreet {
+  display: flex;
+  gap: 11px;
+  font: 500 16px/19px Inter;
+  color: #000000;
+}
+
+.flatsItemMarkSvg {
+  width: 15px;
+  height: 15px;
+  fill: #BDBDBD;
+}
+
+.flatsItemMetro {
+  font: 500 16px/19px Inter;
+  color: #000000;
+  margin-right: 30px;
+  fill: #BDBDBD;
+}
+
+.flatsItemMetroSvg {
+  width: 20px;
+  height: 13px;
+  margin-right: 6px;
+}
+
+.flatsItemDistrict {
+  font: 500 16px/19px Inter;
+  color: #000000;
+}
+
+.flatsItemDistrictSvg {
+  width: 6px;
+  height: 9px;
+  margin-right: 6px;
+}
+
+.flatsItemDescription {
+  color: #8291A3;
+  font: 400 12px/18px Inter;
+  margin-bottom: 13px;
+}
+
+.line {
+  opacity: 0.1;
+  background-color: #4E64F9;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.flatsItemMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mark {
+  composes: chip;
+  padding: 9px;
+}
+
+.markSvg {
+  width: 15px;
+  height: 15px;
+  fill: #EB5757;
+}
+
+.phoneSvg {
+  width: 15px;
+  height: 15px;
+  fill: var(--linkColor);
+}
+
+.flatsItemContacts {
+  composes: chip;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: 700;
+  color: var(--linkColor);
+  position: relative;
+  cursor: pointer;
+}
+
+.contactsInfo {
+  width: 274px;
+  position: absolute;
+  bottom: 60px;
+  left: -60px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  padding: 25px 30px;
+}
+
+.owner {
+  color: #BDBDBD;
+  font: 500 14px/14px Inter;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.ownerInfo {
+  display: block;
+  text-decoration: none;
+  color: var(--darkTextColor);
+  font: 700 20px/20px Inter;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ownerLink {
+  display: block;
+  text-align: center;
+  font: 500 16px/16px Inter;
+  color: var(--linkColor);
+}
+
+.socialsList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+  margin-top: 27px;
+}
+
+.socialsListLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.socialsListLinkViber {
+  composes: socialsListLink;
+  background: #7B519D;
+}
+
+.socialsListLinkWa {
+  composes: socialsListLink;
+  background: #0DBB41;
+}
+
+.socialsListLinkMail {
+  composes: socialsListLink;
+  background: var(--linkColor);
+}
+
+.socialsListSvg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+.flatsItemReadMore {
+  composes: chip;
+  padding: 10px 15px;
+  color: #FEC100;
+}

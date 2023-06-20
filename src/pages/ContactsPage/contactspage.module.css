@@ -1,0 +1,112 @@
+@import url('../../commonstyles.module.css');
+
+.section {
+  composes: section;
+}
+
+.contactsContainer {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 30px;
+  padding: 77px 10px 95px;
+  color: #ffffff;
+  position: relative;
+  z-index: 3;
+}
+
+.contactsDescription {
+  flex-basis: calc(calc(5 / 12) * 100%);
+}
+
+.contactsTitle {
+  font: 700 30px/30px Inter;
+  margin-bottom: 30px;
+}
+
+.contactsText {
+  font: 500 16px/24px Inter;
+  margin-bottom: 30px;
+}
+
+address {
+  font: 600 18px/27px Inter;
+  margin-bottom: 30px;
+}
+
+.ownerInfo {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 11px;
+}
+
+.ownerInfoLink {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.addressSvgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFFFFF1A;
+}
+
+.addressSvg {
+  fill: #ffffff;
+  width: 15px;
+  height: 15px;
+}
+
+.socialsSvg {
+  width: 17px;
+  height: 17px;
+}
+
+.addressSocialsList {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.regInfo {
+  font: 400 14px/21px Inter;
+  margin-bottom: 39px;
+}
+
+.regInfo span {
+  display: block;
+}
+
+.warning {
+  display: flex;
+  gap: 20px;
+  border-radius: 10px;
+  background: #5039BD80;
+  padding: 21px 25px;
+  font: 500 16px/24px Inter;
+}
+
+.warningSvg {
+  width: 40px;
+  height: 40px;
+}
+
+.socialsList {
+  list-style-type: none;
+}
+
+.socialsItem {
+  composes: addressSvgContainer;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+.socialsSvg {
+  fill: #ffffff;
+}

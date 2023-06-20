@@ -1,0 +1,139 @@
+@import url('../../commonstyles.module.css');
+
+.proposalsSection {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  composes: yellowSquare;
+}
+
+.proposalsSection::before {
+  bottom: 0;
+  left: -30px;
+}
+
+.proposalsContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 84px 0 114px;
+}
+
+.proposalsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.proposal {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gradientSubtitle {
+  composes: gradientSubtitle;
+}
+
+.proposalSubtitle {
+  composes: gradientSubtitle;
+  font: 700 13px/16px Inter;
+  margin-bottom: 21px;
+  position: absolute;
+  top: 37px;
+  left: 37px;
+}
+
+.proposalTitle {
+  color: #ffffff;
+  font: 700 25px/30px Inter;
+  margin-bottom: 21px;
+  position: absolute;
+  top: 68px;
+  left: 37px;
+}
+
+.chips {
+  max-width: 365px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: absolute;
+  top: 120px;
+  left: 37px;
+}
+
+.chip {
+  background: var(--linkColor);
+  border-radius: 16px;
+  padding: 8px 14px;
+  color: #FFFFFFB2;
+  font: 500 14px/17px Inter;
+  text-decoration: none;
+}
+
+.chip:hover {
+  background: #612BFB;
+}
+
+.proposalMore {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.proposalSvg {
+  width: 6px;
+  height: 13px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.proposalImg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.flatsTitle {
+  color: #333333;
+  font: 700 18px/22px Inter;
+  margin-bottom: 15px;
+}
+
+.flatsList {
+  list-style-type: none;
+}
+
+.flatsListItem {
+  margin-bottom: 10px;
+}
+
+.flatsListLink {
+  display: inline-block;
+  font: 400 14px/17px Inter;
+  text-decoration: none;
+  color: #FEB700;
+  transition: transform 0.3s ease-in;
+}
+
+.flatsListLink:hover {
+  transform: translate(10px);
+}
+
+.flatsListLinkMore {
+  border-bottom: 1px solid #F5BC03;
+}
+
+.linkSvg {
+  width: 10px;
+  height: 10px;
+  margin-left: 3px;
+}

@@ -1,0 +1,109 @@
+@import url('../../commonstyles.module.css');
+
+.flatsRentSection {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+  composes: sectionGradient;
+}
+
+.flatsRentSection::after {
+  border-radius: 40px 40px 40px 0px;
+  width: 66%;
+}
+
+.flatsRentContainer {
+  padding: 30px 0 90px;
+}
+
+.flatsRentHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePageTitle {
+  composes: homePageTitle;
+}
+
+.selectsContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  margin-bottom: 30px;
+}
+
+.paginationItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #664EF9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.paginationItem:hover {
+  background-color: var(--opacityBgColor);
+}
+
+.paginationSvg {
+  width: 10px;
+  height: 20px;
+}
+
+.prevSvg {
+  transform: rotate(180deg);
+}
+
+.allProposals {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.proposalsCount {
+  color: var(--darkTextColor);
+  font: 700 60px/73px Inter;
+  margin-bottom: 5px;
+}
+
+.plus {
+  color: var(--linkColor);
+}
+
+.cityProposals {
+  color: #8291A3;
+  opacity: 0.6;
+  font: 500 14px/17px Inter;
+}
+
+.seeMoreBtn {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  font: 700 14px/17px Inter;
+  color: #ffffff;
+  background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+  box-shadow: 0px 15px 40px rgba(0, 96, 206, 0.15);
+  border-radius: 17px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.seeMoreBtn:hover {
+  background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+}
+
+.moreBtnSvg {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}

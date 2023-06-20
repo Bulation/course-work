@@ -1,0 +1,13 @@
+.news {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 50px 0 80px;
+}
+
+.errorTitle {
+  margin-top: 15px;
+  text-align: center;
+  color: var(--darkTextColor);
+  font: 700 17px/24px Inter;
+}

@@ -1,0 +1,85 @@
+@import url('../../commonstyles.module.css');
+
+.contactsForm {
+  box-shadow: 0px 20px 40px 0px #275F9E33;
+  background: #FFFEFE;
+  border-radius: 10px;
+  flex-basis: 50%;
+}
+
+.formContainer {
+  font: 500 14px/17px Inter;
+  color: var(--greyTextColor);
+  padding: 40px;
+}
+
+.userInfo {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.userName, .userMail {
+  flex-basis: 50%;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.textareaContainer {
+  margin-bottom: 40px;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: inherit;
+  background-color: #F8F8F8;
+  resize: none;
+}
+
+.textarea:focus {
+  color: var(--darkTextColor);
+  outline: 2px solid #664EF9CC;
+}
+
+.textarea:focus::placeholder {
+  color: transparent;
+}
+
+.formButton {
+  display: block;
+  font: 700 16px/24px Inter;
+  color: #ffffff;
+  padding: 12px 56px;
+  text-align: center;
+  background-color: var(--linkColor);
+  margin: 0 auto;
+  border-radius: 33px;
+  cursor: pointer;
+}
+
+.formButton:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.modalButton {
+  composes: modalButton;
+}
+
+.modalTitle {
+  composes: modalTitle;
+}
+
+.modalText {
+  composes: modalText;
+}

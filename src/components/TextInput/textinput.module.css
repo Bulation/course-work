@@ -1,0 +1,53 @@
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px 15px 55px;
+  border-radius: 30px;
+  background-color: #F8F8F8;
+}
+
+.inputError {
+  outline: 1px solid #EB5757;
+}
+
+.input:focus {
+  color: var(--darkTextColor);
+  outline: 2px solid #664EF9CC;
+}
+
+.input:focus + .inputSvg {
+  opacity: 1;
+  fill: var(--linkColor);
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.inputSvg {
+  fill: var(--greyTextColor);
+  position: absolute;
+  opacity: 0.3;
+  top: 15px;
+  left: 20px;
+  width: 17px;
+  height: 17px;
+}
+
+.errorSvg {
+  fill: #EB5757;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+}
+
+.errorMessage {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}

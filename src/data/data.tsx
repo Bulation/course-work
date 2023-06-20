@@ -1,0 +1,321 @@
+import { SITE_URL } from '../constants/constants';
+import { LinkType } from '../types/LinkType';
+
+export const navigationLinks: LinkType[] = [
+  {
+    content: 'Главная',
+    address: `${SITE_URL}`,
+  },
+  {
+    content: 'Новости',
+    address: `${SITE_URL}news`,
+  },
+  {
+    content: 'Размещение и тарифы',
+    address: `${SITE_URL}tarifs`,
+  },
+  {
+    content: 'Объявления на карте',
+    address: `${SITE_URL}ads`,
+    svgId: '#adsMark',
+  },
+  {
+    content: 'Контакты',
+    address: `${SITE_URL}contacts`,
+  },
+];
+
+export const cities = ['Минск', 'Витебск', 'Гродно', 'Гомель', 'Брест', 'Могилев'];
+
+export const cityOptions = cities.map((city) => ({
+  value: city,
+  label: city,
+  key: 'city',
+}));
+
+export const roomsOptions = [
+  { value: '1', label: '1-комнатные', key: 'roomsCount' },
+  { value: '2', label: '2-комнатные', key: 'roomsCount' },
+  { value: '3', label: '3-комнатные', key: 'roomsCount' },
+  { value: '4', label: '4-комнатные', key: 'roomsCount' },
+  { value: '5', label: '5-комнатные', key: 'roomsCount' },
+];
+
+export const metroOptions = [
+  { value: 'Грушевка', label: 'Грушевка', key: 'metro' },
+  { value: 'Малиновка', label: 'Малиновка', key: 'metro' },
+  { value: 'Уручье', label: 'Уручье', key: 'metro' },
+  { value: 'Восток', label: 'Восток', key: 'metro' },
+  { value: 'Московская', label: 'Московская', key: 'metro' },
+  { value: 'Октябрьская', label: 'Октябрьская', key: 'metro' },
+];
+
+export const districtOptions = [
+  { value: 'Шабаны', label: 'Шабаны', key: 'district' },
+  { value: 'Заводской', label: 'Заводской', key: 'district' },
+  { value: 'Ленинский', label: 'Ленинский', key: 'district' },
+  { value: 'Октябрьский', label: 'Октябрьский', key: 'district' },
+  { value: 'Московский', label: 'Московский', key: 'district' },
+  { value: 'Партизанский', label: 'Партизанский', key: 'district' },
+  { value: 'Первомайский', label: 'Первомайский', key: 'district' },
+  { value: 'Советский', label: 'Советский', key: 'district' },
+  { value: 'Фрунзенский', label: 'Фрунзенский', key: 'district' },
+  { value: 'Центральный', label: 'Центральный', key: 'district' },
+];
+
+export const fastFilterData = [
+  { id: 0, label: 'Недорогие', key: 'maxPrice', value: '100' },
+  { id: 1, label: '1-комнатные', key: 'roomsCount', value: '1' },
+  { id: 2, label: '2-комнатные', key: 'roomsCount', value: '2' },
+  { id: 3, label: '3-комнатные', key: 'roomsCount', value: '3' },
+  { id: 4, label: '4-комнатные', key: 'roomsCount', value: '4' },
+  { id: 5, label: '5-комнатные', key: 'roomsCount', value: '5' },
+  { id: 6, label: 'Заводской р.', key: 'district', value: 'Заводской' },
+  { id: 7, label: 'Ленинский р.', key: 'district', value: 'Ленинский' },
+  { id: 8, label: 'Московский р.', key: 'district', value: 'Московский' },
+  { id: 9, label: 'Октябрьский р.', key: 'district', value: 'Октябрьский' },
+  { id: 10, label: 'Партизанский р.', key: 'district', value: 'Партизанский' },
+  { id: 11, label: 'Первомайский р.', key: 'district', value: 'Первомайский' },
+  { id: 12, label: 'Советский р.', key: 'district', value: 'Советский' },
+  { id: 13, label: 'Фрунзенский р.', key: 'district', value: 'Фрунзенский' },
+  { id: 14, label: 'Центральный р.', key: 'district', value: 'Центральный' },
+];
+
+export const productsList: LinkType[] = [
+  { content: 'Квартиры на сутки', address: `${SITE_URL}catalog`, svgId: '#flatsMark' },
+  { content: 'Коттеджи и усадьбы', address: `${SITE_URL}catalog` },
+  { content: 'Бани и Сауны', address: `${SITE_URL}catalog` },
+  { content: 'Авто напрокат', address: `${SITE_URL}catalog` },
+];
+
+export const dropDownList = [
+  [
+    { content: 'Квартиры на сутки в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Квартиры на сутки в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Квартиры на сутки в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Квартиры на сутки в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Квартиры на сутки в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Квартиры на сутки в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
+  ],
+  [
+    { content: 'Коттеджи и усадьбы в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Коттеджи и усадьбы в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Коттеджи и усадьбы в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Коттеджи и усадьбы в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Коттеджи и усадьбы в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Коттеджи и усадьбы в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
+  ],
+  [
+    { content: 'Бани и сауны в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Бани и сауны в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Бани и сауны в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Бани и сауны в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Бани и сауны в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Бани и сауны в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
+  ],
+  [
+    { content: 'Авто напрокат в Минске', address: `${SITE_URL}catalog?city=Минск` },
+    { content: 'Авто напрокат в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+    { content: 'Авто напрокат в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+    { content: 'Авто напрокат в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+    { content: 'Авто напрокат в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+    { content: 'Авто напрокат в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
+  ],
+];
+
+export const flatsData = [
+  { content: 'Квартиры в Минске', address: `${SITE_URL}catalog?city=Минск` },
+  { content: 'Квартиры в Гомеле', address: `${SITE_URL}catalog?city=Гомель` },
+  { content: 'Квартиры в Бресте', address: `${SITE_URL}catalog?city=Брест` },
+  { content: 'Квартиры в Витебске', address: `${SITE_URL}catalog?city=Витебск` },
+  { content: 'Квартиры в Гродно', address: `${SITE_URL}catalog?city=Гродно` },
+  { content: 'Квартиры в Могилеве', address: `${SITE_URL}catalog?city=Могилев` },
+];
+
+export const flats = [
+  {
+    title: 'Квартиры',
+    flatsList: flatsData,
+  },
+  {
+    title: 'Коттеджи и усадьбы',
+    flatsList: [
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Аггроусадьбы',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Коттеджи',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Загородный комплекс',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Базы отдыха',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Ещё',
+        more: true,
+      },
+    ],
+  },
+  {
+    title: 'Популярные направления',
+    flatsList: [
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Коттеджи и усадьбы на о. Брасласких',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Коттеджи и усадьбы (жилье) на Нарочи',
+      },
+      {
+        address: `${SITE_URL}catalog`,
+        content: 'Коттеджи и усадьбы (жилье) у воды, на берегу, на озере',
+      },
+    ],
+  },
+];
+
+export const proposalsList = [
+  {
+    imgPath: `${SITE_URL}img/flats.png`,
+    subtitle: 'Снять квартиру',
+    title: 'Квартиры на сутки',
+    chips: true,
+  },
+  {
+    imgPath: `${SITE_URL}img/cottages.png`,
+    subtitle: 'Снять коттедж на праздник',
+    title: 'Коттеджи и усадьбы',
+    more: true,
+  },
+  {
+    imgPath: `${SITE_URL}img/baths.png`,
+    subtitle: 'Попариться в бане с друзьями',
+    title: 'Бани и сауны',
+    more: true,
+  },
+  {
+    imgPath: `${SITE_URL}img/cars.png`,
+    subtitle: 'Если срочно нужна машина',
+    title: 'Авто на прокат',
+    more: true,
+  },
+];
+
+export const presentationData = [
+  {
+    title: 'Начните привлекать клиентов бесплатно!',
+    subtitle: (
+      <div>
+        Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно{' '}
+        <b>бесплатно создавать и публиковать </b> объявления на сайте
+      </div>
+    ),
+    btn: '+ Разместить объявление',
+    imgPath: `${SITE_URL}img/target.png`,
+  },
+  {
+    title: 'Поднимайте объявления',
+    subtitle: (
+      <div>
+        Вы в любое время можете <b>поднимать</b> объявления <b> вверх первой страницы </b>
+        каталога, они разместятся сразу после платных объявлений до тех пор, пока другой
+        пользователь не повторит процедуру.
+      </div>
+    ),
+    btn: 'Узнать стоимость услуги',
+    imgPath: `${SITE_URL}img/move.png`,
+  },
+  {
+    title: 'Приоритет Gold',
+    subtitle: (
+      <div>
+        Приоритетное размещение <b>Gold</b> позволяет <b>закрепить ваше объявление</b> в верхней
+        части каталога!
+        <p>
+          Gold объявления <b>перемещаются</b>
+          <br />
+          <b> каждые 5 мин </b>на 1 позицию, что делает размещение одинаковым для всех.
+        </p>
+      </div>
+    ),
+    btn: 'Еще о тарифе Gold',
+    colored: true,
+  },
+];
+
+export const sortList = [
+  { value: '', label: 'По умолчанию' },
+  { value: 'asc', label: 'По возрастанию цены' },
+  { value: 'desc', label: 'По убыванию цены' },
+];
+
+export const ownerInfo = {
+  name: 'ИП Шушкевич Андрей Викторович',
+  regInfo: 'УНП 192602485 Минским горисполкомом 10.02.2016',
+  address: '220068, РБ, г. Минск, ул. Осипенко, 21, кв.23',
+  tel: '+375 29 621 48 33',
+  mail: 'sdaem@sdaem.by',
+  workTime: 'Режим работы: 08:00-22:00',
+};
+
+export const socials = [
+  {
+    url: 'https://instagram.com',
+    src: '#inst',
+  },
+  {
+    url: 'https://vk.com',
+    src: '#vk',
+  },
+  {
+    url: 'https://facebook.com',
+    src: '#fb',
+  },
+  {
+    url: 'https://viber.com',
+    src: '#viber',
+  },
+  {
+    url: 'https://telegram.org',
+    src: '#tg',
+  },
+  {
+    url: 'https://whatsapp.com',
+    src: '#wa',
+  },
+];
+
+export const payments = [
+  {
+    name: 'visa',
+    src: `${SITE_URL}img/visa.png`,
+  },
+  {
+    name: 'webpay',
+    src: `${SITE_URL}img/webpay.png`,
+  },
+  {
+    name: 'verify-visa',
+    src: `${SITE_URL}img/verifyvisa.png`,
+  },
+  {
+    name: 'master card',
+    src: `${SITE_URL}img/mastercard.png`,
+  },
+  {
+    name: 'master card secure code',
+    src: `${SITE_URL}img/securecode.png`,
+  },
+  {
+    name: 'belkart',
+    src: `${SITE_URL}img/belkart.png`,
+  },
+];
